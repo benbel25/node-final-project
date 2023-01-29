@@ -6,7 +6,7 @@ data connection string: mongodb+srv://benbel4:Aa123456@myapi.9nkqd.mongodb.net/M
 # The Env file like so:
 
 ```
-EXPRESS_PORT=
+EXPRESS_PORT=fsdf
 MONGO_USER=
 MONGO_PASSWORD=
 MONGO_HOST=
