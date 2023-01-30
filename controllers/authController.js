@@ -4,11 +4,6 @@ const bcrypt = require('bcrypt')
 const AppError = require('../utils/AppError')
 
 const login = async (req, res) => {
-    //this is a controller function that will be used to login users
-    //this function will check if the user exists in the database and if the password is correct
-    //if it is, it will send a token to the client
-    //if it isn't, it will send a 400 status code
-
     const { email, password } = req.body
 
     const { error } = LoginSchema.validate(req.body)
@@ -39,12 +34,6 @@ const login = async (req, res) => {
 }
 
 const register = async (req, res) => {
-
-    //this is a controller function that will be used to register users
-    //this function will check if the user already exists in the database
-    //if it does, it will send a 400 status code
-    //if it doesn't, it will create a new user and send a token to the client
-
     const { error } = RegisterSchema.validate(req.body)
     if (error) {
         console.log('error', error.details[0].message)

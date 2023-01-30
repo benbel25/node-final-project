@@ -23,6 +23,12 @@ const userSchema = new schema({
         minlength: 6,
         maxlength: 320,
     },
+    phone: {
+        type: String,
+        required: true,
+        minlength: 9,
+        maxlength: 15,
+    },
     password: {
         required: true,
         type: String,

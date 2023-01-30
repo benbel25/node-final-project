@@ -1,6 +1,5 @@
 const nodeMailer = require('nodemailer')
 const { google } = require('googleapis')
-const { tryCatch } = require('./tryCatch')
 const OAuth2 = google.auth.OAuth2
 
 const createTransporter = async () => {

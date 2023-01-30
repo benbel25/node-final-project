@@ -1,9 +1,6 @@
 const { User } = require('../models/users')
 const AppError = require('../utils/AppError')
 module.exports.isAdmin = async (req, res, next) => {
-
-    //this is a middleware function that will be used to protect routes that only admins can access
-    //it will check if the request has a valid token in the Authorization header
     try {
         const reqUser = req.user._id
         const user = await User.findById(reqUser)

@@ -1,9 +1,4 @@
 const errorHandler = (err, req, res, next) => {
-    //this is the error handler middleware that will catch any errors thrown by the controllers
-    //and send them to the client
-    //this will handle errors thrown by the tryCatch wrapper function in utils\tryCatch.js
-    //and errors thrown by the controllers themselves
-    //each error will be handled differently depending on its name
     if (err.name === 'MongoError') {
         return res.status(400).send({
             message: err.message,
